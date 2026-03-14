@@ -33,14 +33,22 @@ skills/
 
 ## Install
 
-### Recommended: install with `npx skills`
+Install all skills from this repository:
 
-This repository is structured for the open agent skills ecosystem, so you do not need to copy files by hand.
+```bash
+npx skills add yzzting/skills
+```
 
-List available skills:
+List available skills before installing:
 
 ```bash
 npx skills add yzzting/skills --list
+```
+
+Install only `repo-record-system`:
+
+```bash
+npx skills add yzzting/skills --skill repo-record-system
 ```
 
 Install `repo-record-system` globally for Claude Code and Codex:
@@ -49,33 +57,11 @@ Install `repo-record-system` globally for Claude Code and Codex:
 npx skills add yzzting/skills --skill repo-record-system -g -a claude-code -a codex -y
 ```
 
-The `skills` CLI supports symlink-based installs and recommends symlinks as the default update-friendly method.
+The `skills` CLI supports symlink-based installs, which makes updates easier over time.
 
-Useful follow-up commands:
+## Manual install
 
-```bash
-npx skills list
-npx skills check
-npx skills update
-```
-
-### Manual install
-
-Manual copying is only a fallback if your environment cannot use the `skills` CLI or symlinks.
-
-For Codex:
-
-```bash
-mkdir -p ~/.codex/skills
-cp -R skills/repo-record-system ~/.codex/skills/repo-record-system
-```
-
-For Claude Code:
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R skills/repo-record-system ~/.claude/skills/repo-record-system
-```
+If you cannot use the `skills` CLI, you can still copy `skills/repo-record-system/` into your local assistant skills directory by hand.
 
 ## Use
 
