@@ -22,11 +22,20 @@ Before implementing any non-bugfix feature change:
 3. update architecture or reference docs if the change touches those layers
 4. only then start implementation
 
+## Session Continuity Rules
+
+- keep a root `HANDOFF.md` for active multi-session work
+- update `HANDOFF.md` before ending unfinished work or switching to a new session
+- `AGENTS.md` should include `Compact Instructions` that preserve architecture decisions, changed files, verification status, and rollback notes during compression
+- `HANDOFF.md` should capture architecture decisions, modified files, verification status, failed attempts, next steps, and rollback notes
+- `HANDOFF.md` is working continuity, not a higher source of truth than code, tests, or permanent docs
+
 ## Freshness Rules
 
 - current-state docs should describe what exists now
 - future ideas belong in an active brief or an architecture transition doc
 - historical plans should stay in a historical area
+- `HANDOFF.md` should describe the current active state or be refreshed when the work changes
 
 ## Authoring Rules
 

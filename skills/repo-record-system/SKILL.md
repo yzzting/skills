@@ -22,7 +22,8 @@ This skill does not replace repository docs. It scaffolds or updates them.
 
 A repository using this pattern should usually have:
 
-- `AGENTS.md` as a short navigation map
+- `AGENTS.md` as a short navigation map with `Compact Instructions`
+- `HANDOFF.md` for active multi-session continuity
 - `docs/index.md` as the docs entry point
 - `docs/reference/doc-governance.md` for update rules
 - `docs/reference/commit-policy.md` for commit discipline
@@ -36,6 +37,7 @@ A repository using this pattern should usually have:
 3. Decide whether the repository already has a partial record system. If it does, fill the gaps instead of replacing everything.
 4. Add or update the repo-level documents:
    - `AGENTS.md`
+   - `HANDOFF.md`
    - `docs/index.md`
    - `docs/reference/doc-governance.md`
    - `docs/reference/commit-policy.md`
@@ -49,9 +51,11 @@ A repository using this pattern should usually have:
 - The repository is the source of operational truth.
 - Code and tests describe current behavior; docs describe intent, rules, and reading paths.
 - Root instructions should stay short and point to deeper docs.
+- `Compact Instructions` should preserve architecture decisions, changed files, verification status, and open rollback notes during compression.
 - Prefer links over duplicated prose.
 - Bugfixes may start from code, but docs must be updated if behavior or interfaces changed.
 - Non-bugfix feature changes should update the relevant docs before implementation starts.
+- `HANDOFF.md` is a continuity aid for active work, not a replacement for permanent docs.
 
 ## References
 
@@ -59,6 +63,7 @@ Read these only when needed:
 
 - `references/adoption-guide.md` for rollout guidance
 - `references/commit-convention.md` for commit rules
+- `references/handoff-convention.md` for cross-session continuity rules
 - `references/logging-convention.md` for change-log rules
 
 ## Templates

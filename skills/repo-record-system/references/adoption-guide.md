@@ -12,8 +12,9 @@ Move durable process knowledge into versioned repository files so contributors a
 2. Decide whether the repo already has root instructions, docs, or contributor rules worth preserving.
 3. Add or update the root map file first.
 4. Add the docs entry point and governance docs.
-5. Add commit and change-log conventions.
-6. Only then expand module-level docs or feature-specific docs if the repository needs them.
+5. Add `Compact Instructions` to the root map and add a root `HANDOFF.md`.
+6. Add commit and change-log conventions.
+7. Only then expand module-level docs or feature-specific docs if the repository needs them.
 
 ## Keep Vs Create
 
@@ -38,6 +39,7 @@ The root file should act as a map, not a full handbook.
 Recommended layering:
 
 - `AGENTS.md`: reading order, source-of-truth precedence, working rules, handoff standard
+- `HANDOFF.md`: active session continuity for unfinished work
 - `docs/index.md`: reading paths and directory guide
 - `docs/reference/doc-governance.md`: how and when docs must be updated
 - `docs/reference/commit-policy.md`: how changes are packaged into commits
@@ -49,6 +51,7 @@ Recommended layering:
 - Match the team's existing vocabulary unless it is actively confusing.
 - If the repo already uses plans, briefs, RFCs, or specs, point to those instead of inventing a second planning system.
 - If the repo has no `docs/` directory yet, create only the folders you need at first.
+- Treat `HANDOFF.md` as current working memory. Refresh it or clear it when the work is done.
 
 ## Anti-Patterns
 
@@ -59,6 +62,7 @@ Avoid these:
 - copying templates without editing them
 - duplicating the same rule in many root files
 - writing future plans as if they already exist
+- letting `HANDOFF.md` grow into a stale historical log instead of a current-state handoff
 
 ## Handoff Standard
 

@@ -42,6 +42,7 @@ mkdir -p \
   "$repo_root/docs/spec"
 
 copy_template "$template_dir/AGENTS.template.md" "$repo_root/AGENTS.md"
+copy_template "$template_dir/HANDOFF.template.md" "$repo_root/HANDOFF.md"
 copy_template "$template_dir/docs-index.template.md" "$repo_root/docs/index.md"
 copy_template "$template_dir/doc-governance.template.md" "$repo_root/docs/reference/doc-governance.md"
 copy_template "$template_dir/commit-policy.template.md" "$repo_root/docs/reference/commit-policy.md"

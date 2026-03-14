@@ -14,7 +14,8 @@ This skill is inspired by OpenAI's February 11, 2026 engineering article, [Harne
 
 It scaffolds:
 
-- `AGENTS.md` as a short map
+- `AGENTS.md` as a short map with `Compact Instructions`
+- `HANDOFF.md` for active multi-session continuity
 - `docs/index.md` as the docs entry point
 - `docs/reference/doc-governance.md`
 - `docs/reference/commit-policy.md`

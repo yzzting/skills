@@ -4,6 +4,13 @@ This repository uses its docs tree as the long-lived record system. Start here b
 
 ## Read Paths
 
+### For active unfinished work
+
+1. `../HANDOFF.md`
+2. the relevant file under `reference/`
+3. the relevant feature or architecture docs
+4. code and tests
+
 ### For general project context
 
 1. the main root guide such as `README.md` or `CLAUDE.md`
@@ -28,6 +35,7 @@ This repository uses its docs tree as the long-lived record system. Start here b
 
 ## Directory Guide
 
+- `../HANDOFF.md`: current handoff for unfinished multi-session work
 - `architecture/`: current architecture and transitions
 - `features/`: feature-level behavior docs
 - `product-specs/`: product behavior and user flows
@@ -41,6 +49,7 @@ This repository uses its docs tree as the long-lived record system. Start here b
 ## Source Of Truth Rules
 
 - current code and tests win over stale prose
+- `HANDOFF.md` helps resume active work but does not override permanent docs
 - shared spec files are the contract layer
 - architecture and module docs describe intended structure
 - feature docs describe end-to-end behavior

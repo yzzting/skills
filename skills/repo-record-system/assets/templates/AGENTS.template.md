@@ -6,13 +6,15 @@ Treat this repository as the record system: docs explain intent, code and tests 
 
 Before making non-trivial changes, read in this order:
 
-1. `docs/index.md`
-2. the main root project guide such as `README.md` or `CLAUDE.md`
-3. the relevant module-level docs
-4. current code, tests, and root configuration
+1. `HANDOFF.md` if it contains active in-progress work
+2. `docs/index.md`
+3. the main root project guide such as `README.md` or `CLAUDE.md`
+4. the relevant module-level docs
+5. current code, tests, and root configuration
 
 ## Documentation Map
 
+- `HANDOFF.md`: active session continuity for unfinished multi-session work
 - `docs/index.md`: top-level doc index and reading paths
 - `docs/architecture/`: current architecture and transition records
 - `docs/features/`: end-to-end feature behavior
@@ -38,6 +40,16 @@ When docs and implementation differ, use this order:
 
 If you discover a mismatch, fix the docs in the same change or call it out explicitly in handoff.
 
+## Compact Instructions
+
+When compressing, preserve in priority order:
+
+1. architecture decisions and constraints (never summarize)
+2. modified files and their key changes
+3. current verification status (pass/fail)
+4. open TODOs and rollback notes
+5. tool outputs (can delete, keep pass/fail only)
+
 ## Working Rules
 
 - reuse the existing architecture unless an architecture change is documented first
@@ -60,3 +72,5 @@ When finishing work, report:
 - what was verified
 - any remaining mismatch between docs and code
 - which source you followed if instructions conflicted
+
+If work is unfinished or another session will continue it, update `HANDOFF.md` before stopping. The next agent should be able to resume from `HANDOFF.md` and the files it references without relying on chat summaries alone.
