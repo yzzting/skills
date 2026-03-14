@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Record System"
+  short_description: "Scaffold repo-as-record-system docs, commit policy, and change log conventions"
+  default_prompt: "Initialize or upgrade this repository so the repository itself becomes the long-lived record system. Add or update AGENTS.md, docs index and governance docs, commit conventions, and change-log conventions, using the included templates only as a starting point."
