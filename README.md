@@ -33,9 +33,35 @@ skills/
 
 ## Install
 
+### Recommended: install with `npx skills`
+
+This repository is structured for the open agent skills ecosystem, so you do not need to copy files by hand.
+
+List available skills:
+
+```bash
+npx skills add yzzting/skills --list
+```
+
+Install `repo-record-system` globally for Claude Code and Codex:
+
+```bash
+npx skills add yzzting/skills --skill repo-record-system -g -a claude-code -a codex -y
+```
+
+The `skills` CLI supports symlink-based installs and recommends symlinks as the default update-friendly method.
+
+Useful follow-up commands:
+
+```bash
+npx skills list
+npx skills check
+npx skills update
+```
+
 ### Manual install
 
-Clone this repository and copy the skill into your tool's local skills directory.
+Manual copying is only a fallback if your environment cannot use the `skills` CLI or symlinks.
 
 For Codex:
 
@@ -50,16 +76,6 @@ For Claude Code:
 mkdir -p ~/.claude/skills
 cp -R skills/repo-record-system ~/.claude/skills/repo-record-system
 ```
-
-### Install with `npx skills`
-
-If you use the [skills](https://github.com/vercel-labs/skills) CLI, you can install from this repository directly:
-
-```bash
-npx skills add https://github.com/yzzting/skills --skill repo-record-system -g -a claude-code -a codex
-```
-
-If your local setup uses only one assistant, you can remove the other `-a` flag.
 
 ## Use
 
