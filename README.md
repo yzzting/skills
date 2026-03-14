@@ -10,6 +10,8 @@ This repository is the public home for skills that I want to reuse across projec
 
 Bootstraps or upgrades a repository so the repository itself becomes the long-lived record system.
 
+This skill is inspired by OpenAI's February 11, 2026 engineering article, [Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/), especially the section about treating the repository as the record system.
+
 It scaffolds:
 
 - `AGENTS.md` as a short map
